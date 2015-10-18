@@ -7,10 +7,10 @@ Date: 2015/09
 
 #include "RE\ReEngAppClass.h"
 #include <SFML\Graphics.hpp>
+#include <vector>
 #include  "BoundingSphere.h"
 //#include <chrono>
 
-#include <vector>
 using namespace ReEng; //Using ReEng namespace to use all the classes in the dll
 
 class AppClass : public ReEngAppClass
@@ -28,7 +28,6 @@ public:
 	BoundingSphere* b_Cone;
 
 	quaternion b_ArcBall;
-
 
 	/* Constructor */
 	AppClass(HINSTANCE hInstance, LPWSTR lpCmdLine, int nCmdShow) : super(hInstance, lpCmdLine, nCmdShow) {}
@@ -77,5 +76,4 @@ public:
 	*/
 	virtual void Release(void);
 };
-
 #endif //__APPLICATION_H_

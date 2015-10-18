@@ -10,12 +10,10 @@ using namespace ReEng;
 
 class BoundingSphere
 {
-	
 	std::vector<vector3> vertexList;
 	vector3 position;
 	float radius;
 	vector3 center;
-
 
 public:
 
@@ -34,6 +32,6 @@ public:
 	
 private:
 
-}
+};
 
 #endif //BOUDNINGSPHERE

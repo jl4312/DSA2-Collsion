@@ -19,7 +19,8 @@ void AppClass::InitVariables(void)
 	m_pCone = new PrimitiveClass();
 	m_pCone->GenerateCone(1.0f, 1.0f, 10, REGREEN);
 
-	m_pCone->GetVertices();
+	//m_pCone->GetVertices();
+
 
 	b_Torus = new BoundingSphere(m_pTorus->GetVertices());
 	b_Cone = new BoundingSphere(m_pCone->GetVertices());
@@ -59,8 +60,6 @@ void AppClass::Display(void)
 
 	m_pTorus->Render(glm::translate(matrix4(1.0f), m_v3Torus), REGREEN);
 	m_pCone->Render(glm::translate(matrix4(1.0f), m_v3Cone), REBLUE);
-
-	
 
 	m_pGLSystem->GLSwapBuffers(); //Swaps the OpenGL buffers
 }

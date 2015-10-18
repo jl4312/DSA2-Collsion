@@ -18,7 +18,7 @@ bool BoundingSphere::IsColliding(BoundingSphere* pOther)
 
 void BoundingSphere::UpdatePosition(vector3 v3Input)
 {
-	this->position *= glm::translate(v3Input);
+	this->position = vector3(vector4(position, 0.0f) * glm::translate(matrix4(IDENTITY), v3Input));
 }
 
 void BoundingSphere::calcRadius()
@@ -65,8 +65,6 @@ void BoundingSphere::calcRadius()
 				radius = fDistance;
 			}
 		}
-
-		
 	}
 }
 
